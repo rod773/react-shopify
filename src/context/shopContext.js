@@ -18,6 +18,10 @@ class shopProvider extends Component {
     isMenuOpen: false,
   };
 
+  createCheckout = async () => {};
+
+  fetchCheckout = async () => {};
+
   render() {
     return <div>shopProvider</div>;
   }
