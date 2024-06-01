@@ -10,6 +10,10 @@ const client = Client.buildClient({
 });
 
 class shopProvider extends Component {
+  state = {
+    product: {},
+  };
+
   render() {
     return <div>shopProvider</div>;
   }
