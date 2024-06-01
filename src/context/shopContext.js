@@ -24,7 +24,9 @@ class shopProvider extends Component {
 
   addItemCheckout = async () => {};
 
-  removeLineItem = async () => {};
+  removeLineItem = async (lineItemsIdToRemove) => {};
+
+  fetchAllProducts = async () => {};
 
   render() {
     return <div>shopProvider</div>;
