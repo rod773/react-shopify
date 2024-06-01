@@ -28,6 +28,10 @@ class shopProvider extends Component {
 
   fetchAllProducts = async () => {};
 
+  fetchProductWidthHandle = async (handle) => {};
+
+  closeCart = () => {};
+
   render() {
     return <div>shopProvider</div>;
   }
