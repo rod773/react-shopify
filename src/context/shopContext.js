@@ -12,6 +12,10 @@ const client = Client.buildClient({
 class shopProvider extends Component {
   state = {
     product: {},
+    products: [],
+    checkout: {},
+    isCartOpen: false,
+    isMenuOpen: false,
   };
 
   render() {
