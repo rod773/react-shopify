@@ -32,6 +32,12 @@ class shopProvider extends Component {
 
   closeCart = () => {};
 
+  openCart = () => {};
+
+  closeMenu = () => {};
+
+  openMenu = () => {};
+
   render() {
     return <div>shopProvider</div>;
   }
