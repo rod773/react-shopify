@@ -39,7 +39,7 @@ class shopProvider extends Component {
   openMenu = () => {};
 
   render() {
-    return <div>shopProvider</div>;
+    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
   }
 }
 
