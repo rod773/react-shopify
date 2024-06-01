@@ -22,6 +22,8 @@ class shopProvider extends Component {
 
   fetchCheckout = async () => {};
 
+  addItemCheckout = async () => {};
+
   render() {
     return <div>shopProvider</div>;
   }
