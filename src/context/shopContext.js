@@ -6,10 +6,10 @@ const ShopContext = React.createContext();
 // Initializing a client to return content in the store's primary language
 const client = Client.buildClient({
   domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_STOREFRONT_KEY,
 });
 
-class shopProvider extends Component {
+class ShopProvider extends Component {
   state = {
     product: {},
     products: [],
@@ -56,12 +56,28 @@ class shopProvider extends Component {
   render() {
     console.log(this.state.checkout);
 
-    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
+    return (
+      <ShopContext.Provider
+        value={{
+          ...this.state,
+          fetchAllProducts: this.fetchAllProducts,
+          fetchProductWithHandle: this.fetchProductWithHandle,
+          closeCart: this.closeCart,
+          openCart: this.openCart,
+          closeMenu: this.closeMenu,
+          openMenu: this.openMenu,
+          addItemToCheckout: this.addItemToCheckout,
+          removeLineItem: this.removeLineItem,
+        }}
+      >
+        {this.props.children}
+      </ShopContext.Provider>
+    );
   }
 }
 
-const ShopConsumer = ShopContext.Consumer();
+const ShopConsumer = ShopContext.Consumer;
 
 export { ShopConsumer, ShopContext };
 
-export default shopProvider;
+export default ShopProvider;
