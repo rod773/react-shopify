@@ -54,6 +54,8 @@ class shopProvider extends Component {
   openMenu = () => {};
 
   render() {
+    console.log(this.state.checkout);
+
     return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>;
   }
 }
