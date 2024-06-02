@@ -18,6 +18,10 @@ class shopProvider extends Component {
     isMenuOpen: false,
   };
 
+  componentDidMount() {
+    this.createCheckout();
+  }
+
   createCheckout = async () => {
     const checkout = await client.checkout.create();
     localStorage.setItem("checkout-id", checkout.id);
