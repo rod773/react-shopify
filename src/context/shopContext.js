@@ -26,9 +26,16 @@ class shopProvider extends Component {
 
   removeLineItem = async (lineItemsIdToRemove) => {};
 
-  fetchAllProducts = async () => {};
+  fetchAllProducts = async () => {
+    const products = await client.product.fetchAll();
+    this.setState({ products: products });
+  };
 
-  fetchProductWidthHandle = async (handle) => {};
+  fetchProductWidthHandle = async (handle) => {
+    const product = await client.product.fetchByHandle(handle);
+
+    this.setState({ product: product });
+  };
 
   closeCart = () => {};
 
